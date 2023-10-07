@@ -18,5 +18,31 @@ Route::get('/', function () {
 });
 
 Route::get("/info", function () {
-    return view("giorgi bitsadze, 21 wlis, IT studenti, hobi varjishi, gaming");
+    return "giorgi bitsadze, 21 wlis, IT studenti, hobi varjishi, gaming";
+});
+
+Route::get("/info2", function () {
+    return "damatebiti info chemze aq iqneba";
+});
+
+Route::get("/info3", function () {
+    return "damatebiti info chemze aqac iqneba kidev ertxel";
+});
+
+Route::post("/postmessage", function () {
+    return response()->json([
+        "message" => "წარმატებით დაემატა" 
+    ]);
+});
+
+Route::put("/postmessage", function () {
+    return response()->json([
+        "message" => "წარმატებით განახლდა"
+    ]);
+});
+
+Route::delete("/postmessage", function () {
+    return response()->json([
+        "message" => "წარმატებით წაიშალა"
+    ]);
 });
